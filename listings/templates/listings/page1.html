@@ -1,0 +1,11 @@
+<html>
+{% extends 'listings/base.html' %}
+{% block base %}
+<h1>page1</h1>
+<ol>
+{% for p in personnes %}
+<li> name: {{p.name}} _____ age: {{p.age}}______ mat: {{p.mat}} </li>
+{% endfor %}
+</ol>
+{% endblock %}
+</html>

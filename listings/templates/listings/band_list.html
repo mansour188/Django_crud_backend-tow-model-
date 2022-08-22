@@ -1,0 +1,20 @@
+<html>
+<head>
+
+<title>Band_list</title>
+</head>
+<body>
+<h1> Band </h1>
+<h2> <a href="{% url 'band_create' %}"> creat new band</a> </h2>
+<ol>
+    {% for band in bands %}
+    <h3>  <li> <a href="{% url 'band_ditail' band.id %}">name: {{band.name}} </a>  </li> </h3>
+    <h4 > <a style="color:green;" href="{% url 'update_band' band.id %}"> [Edit]</a></h4>
+    <h4><a style="color:red;" href="{% url 'band_delate' band.id %}"> DELATE </a></h4>
+
+
+
+{% endfor %}
+    </ol>
+</body>
+</html>

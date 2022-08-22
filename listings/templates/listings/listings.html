@@ -1,0 +1,13 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1> list of listings</h1>
+<h2> <a href="{% url "listing_add" %}"> add listing</a></h2>
+{% for l in listings %}
+<h2> <a href="{% url  'listing_ditail' l.id %}" >{{ l.title }}</h2>
+<h2> <a style="color:red" ; href="{% url 'listing_update' l.id   %} " > [EDIT] </a></h2>
+{% endfor %}
+</body>
+</html>
